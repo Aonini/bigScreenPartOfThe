@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>北京市公安局虹膜身份核查系统大数据看板</title>
+    <link rel="stylesheet" href="/css/ScreenDisplay.css">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/ScreenDisplay.js"></script>
+</head>
+<body>
+    <nav id="leftNav">
+        <div class="left_nav_title">
+            <div></div>
+        </div>
+        <ul class="leftItem">
+            <li  class="removeClass  leftIframeItem">概览<i class="thisLiIcon"></i></li>
+            <li class="removeClass  leftIframeItem">采集<i class="thisLiIcon"></i></li>
+            <li  class="removeClass leftIframeItem">卡口<i class="thisLiIcon"></i></li>
+            <li class="bjxx  leftIframeItem">报警信息<i class="thisLiIcon"></i></li>
+            <li class="removeClass">admin<i class="thisLiIcon"></i></li>
+            <li class="tuichu removeClass">退出<i class="thisLiIcon"></i></li>
+        </ul>
+    </nav>
+    <section id="section" class="bgColor">
+        <div id="header">
+            <img src="/icon/title.png" class="header_title">
+            <span>北京市公安局虹膜身份核查系统</span>
+        </div>
+        <div id="content">
+            <iframe src="/html/summary.html" class="mainiframe  " scrolling="no" frameborder="no"></iframe>
+            <iframe src="/html/gather.html" class="mainiframe " scrolling="no" frameborder="no"></iframe>
+            <iframe src="/html/identify.html" class="mainiframe " scrolling="no" frameborder="no"></iframe>
+            <iframe src="/html/warning.html" class="mainiframe " scrolling="no" frameborder="no"></iframe>
+        </div>
+    </section>
+    <script src="/js/layer-v3.1.1/layer/layer.js"></script>
+    <script>
+        var action = {
+            resize: function () {
+                $(".mainiframe").height($("#content").height() - 5)
+                $(".mainiframe").width($("#content").width() - 20)
+            }
+        }
+        action.resize()
+        $(window).resize(function () {
+            action.resize()
+        })
+    </script>
+</body>
+
+</html>

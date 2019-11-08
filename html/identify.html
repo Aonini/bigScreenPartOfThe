@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>北京市公安局虹膜身份核查系统大数据看板</title>
+    <link rel="stylesheet" href="/css/tools.css">
+    <link rel="stylesheet" href="/css/gatherIdentifyStyle.css">
+    <link rel="stylesheet" href="/css/identify.css">
+    <link rel='stylesheet' href='http://localhost:9000/bigemap.js/v2.1.0/bigemap.css'/>
+    <link rel="stylesheet" href="/js/layDate-v5.0.9/laydate/theme/default/laydate.css">
+    <script src='http://localhost:9000/bigemap.js/v2.1.0/bigemap.js'></script>
+    <script src="/js/baseUrl.js"></script>
+    <script src="/js/echarts.js"></script>
+</head>
+
+<body>
+    <a class="realTime" href="javascript:" style="color: aliceblue;display: none;">实时数据</a>
+    <div class="content_top">
+        <div class="left_content addBorder">
+            <!--   上面检索 -->
+            <div class="left_content_data">
+                <span>时间范围:</span>
+                <span>
+                    <input type="radio" value="1" checked name="radio" />
+                    <label> 按月</label>
+                </span>
+                <span>
+                    <input type="radio" value="2" name="radio" />
+                    <label> 按周</label>
+                </span>
+                <span>
+                    <input type="radio" value="3" name="radio" />
+                    <label> 按天</label>
+                </span>
+                <span class="mothSpan">
+                    <input type="text" autocomplete="off" class="dateStyle" id="date">
+                    <i>一</i>
+                    <input type="text" autocomplete="off" class="dateStyle" id="date2">
+                </span>
+                <!-- 因为layuidate  只能初始化的时候设置一次  不能动态设置值 所以 需要两个元素切换 -->
+                <span class="dateSpan">
+                    <input type="text" autocomplete="off" placeholder="请选择开始日期" class="dateStyle" id="date3">
+                    <i>一</i>
+                    <input type="text" autocomplete="off" placeholder="请选择结束日期" class="dateStyle" id="date4">
+                </span>
+                <span class="zhouSpan">
+                    <input type="text" autocomplete="off" placeholder="请选择开始周一" class="dateStyle" id="date5">
+                    <i>一</i>
+                    <input type="text" autocomplete="off" placeholder="请选择结束周日" class="dateStyle" id="date6">
+                </span>
+                <span class="serch">查询</span>
+            </div>
+            <div class="left_nav_sub_title">
+                <span>北京市</span>
+            </div>
+            <!--地图 -->
+            <div id="map">
+                <div id="return" class="btn mapBtn">返回</div>
+                <div id="firstMap" class="btn mapBtn">首页</div>
+                <!-- <div id="mapTs">
+                               <span>机构</span>
+                           </div> -->
+            </div>
+        </div>
+        <!-- 右边结构 -->
+        <div class="right_content addBorder">
+            <div class="real-time">
+                <span class="sub_title">实时数据</span>
+                <ul class="real-time_list">
+                    <li>
+                        <span class="real-time_list_item_title">今日采集量</span>
+                        <div id="tedayGather" class="real-time_list_item_NB blue  tedayGather">
+
+                        </div>
+                    </li>
+                    <li>
+                        <span class="real-time_list_item_title">累计采集量</span>
+                        <div id="ljGather" class="real-time_list_item_NB green  ljGather">
+                        </div>
+                    </li>
+                    <li class="real-time_list_last_three">
+                        <span class="real-time_list_item_title">昨日</span>
+                        <div class="real-time_list_item_NB gree green zuori">
+                            <span></span>
+                        </div>
+                    </li>
+                    <li class="real-time_list_last_three">
+                        <span class="real-time_list_item_title">本周</span>
+                        <div class="real-time_list_item_NB blue  benzhou">
+                            <span></span>
+                        </div>
+                    </li>
+                    <li class="real-time_list_last_three">
+                        <span class="real-time_list_item_title">上周</span>
+                        <div class="real-time_list_item_NB blue  shangzhou">
+                            <span></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="right_charts">
+                <span class="sub_title">各卡口识别量占比</span>
+                <div class="bing_charts" id="bing_charts"></div>
+            </div>
+        </div>
+    </div>
+    <div id="bottom_charts" class="addBorder">
+        <span class="sub_title  tishi">北京市各分局识别量</span>
+        <div class="btn  zhe_charts_return">返回</div>
+        <div class="charts">
+            <!-- 图表 -->
+            <div class="zhu_charts" id="zhu_charts"></div>
+            <div class="zhe_charts" id="zhe_charts"></div>
+        </div>
+    </div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/layui/layui.js"></script>
+    <script src="/js/layui_config.js"></script>
+    <script src="/js/addECharts.js"></script>
+    <script src="/js/identify.js"></script>
+    <script>
+        var token = localStorage.getItem("loginToken")
+        if (token == "") {
+            window.location.href = "login.html"
+        }
+    </script>
+</body>
+
+</html>

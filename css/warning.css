@@ -1,0 +1,115 @@
+html,body{
+    height: 100%;
+}
+.layui-input {
+    border: 1px solid #D5D5D5;
+}
+
+.layui-table,
+.layui-table-view {
+    margin: 0 auto;
+}
+
+.layui-fluid {
+    padding: 0px 7px 0px 0px !important;
+    background:#000000;
+}
+#layui-card{
+    background:#000000;
+
+}
+#formDiv{
+    background:#000000;
+    border: 1px solid #006699;
+    color:#6E98FC; 
+    border-radius: 20px;
+}
+.layui-input{
+    background:#00334C !important;
+    border: none;
+    color:#fff !important; 
+    border-radius: 5px;
+}
+body{
+    padding-left:20px; 
+}
+#component-form-demo1{
+    background: #006699 !important;
+}
+.tableBody{
+    border: 1px solid #006699;
+    color:#6E98FC; 
+    border-radius: 20px;
+}
+#table-card{
+    background: #000000
+}
+#box_height{
+    background: #000000;
+    margin-top:11px;
+}
+#person_tab{
+    background: red
+}
+.layui-table-view{
+    background: #00334C !important;
+}
+.layui-table-header{
+    background: #00334C !important;
+    /* border-bottom: 1px solid #006699; */
+}
+.layui-table-view .layui-table td, .layui-table-view .layui-table th {
+    background: #00334C !important;
+    color: #fff;
+    border-right:1px solid #006699;
+}
+div[lay-filter="LAY-table-1"]{
+    border:  1px solid #006699 !important;
+}
+#layui-layer1{
+    background: #07203E !important;
+}
+.layui-layer-btn{
+    border-top:1px solid  #006699;
+}
+.layui-layer-title{
+    background:  #07203E !important;
+    border-bottom:1px solid  #006699 !important;
+    color: #fff !important;
+}
+#layui-layer-iframe1{
+    border: none
+}
+#layui-layer1{
+    border:  1px solid #006699 !important;
+}
+.layui-table-page .layui-laypage a{
+    color: #fff !important;
+}
+.layui-table-page .layui-laypage span{
+    color: #fff !important;
+}
+.layerSee{
+    font-size:12px !important; 
+    overflow:hidden; 
+    text-overflow:ellipsis; 
+    white-space:nowrap; 
+    width: 100%;
+    font-weight: bold;
+    margin-left: 5px;
+}
+.layerB{
+    width: 60%;
+}
+.imgP{
+    width: 80px;
+    height: 90px;
+    float: right;
+    margin-right: 30px;
+    margin-top: -80px;
+    background-size:100% 100%;  
+}
+.imgP img{
+    height: 100%;
+    width: 100%;
+}

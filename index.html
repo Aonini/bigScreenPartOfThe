@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>登录</title>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+
+<body style="overflow-x:hidden;">
+    <div class="content">
+        <div class="header">
+            <!-- <img class="titlePic" src="/img/gh.png"> -->
+            <span>北京市公安局虹膜身份核查系统</span>
+        </div>
+        <form>
+            <div class="first  inputP">
+                <img src="/icon/users.png" />
+                <input type="text" placeholder="请输入用户名" maxlength="33" autocomplete="off" />
+            </div>
+            <div class="towInput  inputP">
+                <img src="/icon/lock.png" />
+                <input type="password" placeholder="请输入密码" maxlength="33" autocomplete="off" />
+            </div>
+            <a href="#" class="dl">登录</a>
+        </form>
+    </div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/layui/layui.js"></script>
+    <script src="/js/baseUrl.js"></script>
+    <script src="/js/login.js"></script>
+    <script>
+        function resize() {
+            var windowWidth = parseFloat($(window).height()) / 2 - parseFloat($(".content").css("height")) / 2
+            $(".content").css("margin-top", windowWidth)
+        }
+        resize();
+        $(window).resize(function () {
+            resize();
+        })
+    </script>
+</body>
+
+</html>
