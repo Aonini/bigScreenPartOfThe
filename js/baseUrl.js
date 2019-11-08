@@ -1,0 +1,37 @@
+// var baseUrl = "http://10.2.1.224:25559/";
+var SbaseUrl = "http://10.2.1.35:9080/" //有的接口 9080  有的9098
+var baseUrl9098 = "http://10.2.1.35:9098/"
+var  socket = "ws://10.2.1.35:9098/"
+var personDate = "ws://10.10.1.108:25559/wsdemo/personDate"
+var realTimeData = "ws://10.10.1.108:25559/wsdemo/realTimeData"
+var realTimeWarringData = "ws://10.10.1.108:25559/wsdemo/realTimeWarringData"
+var mapIniDataUrl = "http://10.2.1.224:25559/map/mapIniData" //初始数据接口
+var loginUrl = SbaseUrl+"IriskingUser/login"//登录页请求接口
+var logDesUrl = SbaseUrl+"common/desEncrypt"//登录页密码加密接口
+var alarmRecord = baseUrl9098+"bigScreen/alarmRecord" //报警表格数据
+var alarmCompare = baseUrl9098+"bigScreen/alarmCompare"
+var orgDetailSummaryGraph= baseUrl9098+"bigScreen/orgDetailSummaryGraph"//柱状图点击数据接口
+var nextOrgSummaryGraph= baseUrl9098 +"bigScreen/nextOrgSummaryGraph"
+var socketUrl= `${socket}bigScreen/${localStorage.getItem("name")}/2/${localStorage.getItem("userJGDM")}`
+var  getSuspiciousType =baseUrl9098+"bigScreen/getSuspiciousType"
+// var getWarringData = baseUrl + "warring/getWarringData"; //报警页面 获取数据
+// var serchUrl = baseUrl + "map/selectData" //搜索接口
+// var markerUrl = baseUrl + "map/getSecondData" //getSecondData   圆点点击接口
+// var getBack = baseUrl + "map/getBack" //点击返回时候的接口
+// var zhudata = baseUrl + "map/getStatistics" //柱状图点击接口
+// var weekData = baseUrl + "statistics/getRealTimeData" //右边实时数据  周接口
+// var nowDataUrl = baseUrl + "statistics/RealTimeData"
+// var RealTimeWarringData = baseUrl + "warring/RealTimeWarringData" //报警信息弹窗
+// var serchUrl = baseUrl + "map/selectData" //搜索接口
+// var markerUrl = baseUrl + "map/getSecondData" //getSecondData   圆点点击接口m 
+// var getBack = baseUrl + "map/getBack" //点击返回时候的接口
+// var zhudata = baseUrl + "map/getStatistics" //柱状图点击接口
+// var personDate = baseUrl + "map/personDate" //右侧的眼睛滚动数据接口
+// var RealTimeData = baseUrl + "statistics/RealTimeData"
+// var serchUrl = baseUrl + "map/selectData" //搜索接口
+// var markerUrl = baseUrl + "map/getSecondData" //getSecondData   圆点点击接口
+// var getBack = baseUrl + "map/getBack" //点击返回时候的接口
+// var zhudata = baseUrl + "map/getStatistics" //柱状图点击接口
+// var weekData = baseUrl + "statistics/getRealTimeData"//右边实时数据  周接口
+
+
