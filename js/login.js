@@ -15,7 +15,7 @@ $(function () {
             if (nameVal == undefined || nameVal == "") {
                 layer.msg("请输入用户名", {
                     icon: "5",
-                    time: 2000
+                    time: 22
                 });
                 $("input[type=text]").focus();
                 $(".first").css("border", "1px solid red");
